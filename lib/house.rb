@@ -22,6 +22,8 @@ class House
         room
       end
     end
+    rooms_in_category.delete(nil)
+    rooms_in_category
   end
 
   def area
@@ -37,5 +39,10 @@ class House
       "price" => @price,
       "address" => @address
     }
+  end
+
+  def price_per_square_foot
+    integer_price = @price[1..-1].to_f
+    (integer_price / area).round(2)
   end
 end
