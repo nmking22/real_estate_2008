@@ -27,7 +27,6 @@ class RoomTest < Minitest::Test
   end
 
   def test_it_can_be_painted
-    skip
     room = Room.new(:bedroom, 10, '13')
     room.paint
 
