@@ -23,4 +23,19 @@ class House
       end
     end
   end
+
+  def area
+    area_of_house = 0
+    @rooms.each do |room|
+      area_of_house += room.area
+    end
+    area_of_house
+  end
+
+  def details
+    house_details = {
+      "price" => @price,
+      "address" => @address
+    }
+  end
 end
