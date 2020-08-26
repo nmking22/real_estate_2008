@@ -45,4 +45,10 @@ class House
     integer_price = @price[1..-1].to_f
     (integer_price / area).round(2)
   end
+
+  def sorted_by_area
+    @rooms.sort! { |room_a, room_b| room_a.area <=> room_b.area}
+    @rooms.reverse()
+  end
+
 end
